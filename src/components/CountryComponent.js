@@ -1,4 +1,11 @@
-const CountryComponent = () => {
+const CountryComponent = ({}) => {
+
+    return(
+        <>
+            <h2>Country Component</h2>
+            
+        </>
+    )
 
 }
 
