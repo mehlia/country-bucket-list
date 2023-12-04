@@ -5,6 +5,7 @@ const VisitedCountryList = () => {
     return(
         <>
             <h2>Countries Visited:</h2>
+            {}
         </>
     )
 
