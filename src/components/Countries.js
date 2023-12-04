@@ -1,5 +1,6 @@
 const Countries = ({country, markCountryAsVisited}) => {
 
+    // button function to mark each country as visited, button next to each country
     const onButtonClick = () => {
         markCountryAsVisited(country)
     };

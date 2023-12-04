@@ -22,12 +22,12 @@ const CountryContainer = () => {
         loadCountriesData();
     }, []);
 
-    // function to mark country as visited
-    const markCountryAsVisited = (countryId) => {
-        // checks if country is already in visitedCountries list, if not then adds to visited countries empty array
-        if (!visitedCountries.includes(countryId)) {
-            setVisitedCountries((visitedNewCountry) => [...visitedNewCountry, countryId]);
-        }
+    // function to mark country as visited - attempted with if statement before but changed the function type
+    const markCountryAsVisited = (countryVisited) => {
+        // creates copy of original array & adds visited country to the array when marked as visited
+        const updateVisitedCountries = [...visitedCountries]
+        updateVisitedCountries.push(countryVisited);
+        setVisitedCountries(updateVisitedCountries); // updates state of empty visitedCountries array
     }
 
     console.log(countries);
@@ -36,10 +36,9 @@ const CountryContainer = () => {
         // returns list of countries as a list to the user
         <>
         <CountryList countries={countries}/>
-
         <VisitedCountryList visitedCountries={visitedCountries}/>
         </>
-    )
+    );
 }
 
 export default CountryContainer;
