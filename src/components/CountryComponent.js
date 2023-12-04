@@ -1,12 +1,9 @@
-const CountryComponent = ({}) => {
+const CountryComponent = ({countries, markAsVisited}) => {
 
     return(
         <>
-            <h2>Country Component</h2>
-            
         </>
     )
-
 }
 
 export default CountryComponent;

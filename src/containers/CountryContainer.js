@@ -11,7 +11,7 @@ const CountryContainer = () => {
         const data = await response.json();
         setCountries(data); 
         console.log(data);
-    }
+    };
 
     useEffect(() => {
         loadCountriesData();
@@ -20,12 +20,10 @@ const CountryContainer = () => {
     console.log(countries);
 
     return(
-        <CountryComponent/>
-
+        <>
+        
+        </>
     )
-
 }
-
-
 
 export default CountryContainer;

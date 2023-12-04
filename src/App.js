@@ -1,23 +1,23 @@
 import './App.css';
 import CountryContainer from './containers/CountryContainer';
+import CountryComponent from './components/CountryComponent';
 
-function App() {
+function App({countries}) {
   return (
     <>
       <h1>Country Bucket List</h1>
       <CountryContainer/>
 
       <div>
-        <h2>Countries I want to visit</h2>
-        <ul>
-
-        </ul>
+      <h2>Countries I want to visit</h2>
       </div>
-
+      
       <div>
-        <h2>Countries I have visited</h2>
+      <h2>Countries Visited</h2>
       </div>
     </>
+
+    
   );
 }
 
