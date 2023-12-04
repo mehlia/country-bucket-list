@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import CountryComponent from '../components/CountryComponent';
+import Countries from '../components/Countries';
+import CountryList from '../components/CountryList';
 
 const CountryContainer = () => {
 
-    const [countries, setCountries] = useState(null);
+    const [countries, setCountries] = useState([]);
     const [visitedCountries, setVisitedCountries] = useState(null);
 
     const loadCountriesData = async () => {
@@ -21,7 +22,7 @@ const CountryContainer = () => {
 
     return(
         <>
-        
+        <CountryList countries={countries}/>
         </>
     )
 }

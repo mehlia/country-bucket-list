@@ -1,6 +1,6 @@
 import './App.css';
 import CountryContainer from './containers/CountryContainer';
-import CountryComponent from './components/CountryComponent';
+import Countries from './components/Countries';
 
 function App({countries}) {
   return (
@@ -17,7 +17,6 @@ function App({countries}) {
       </div>
     </>
 
-    
   );
 }
 
