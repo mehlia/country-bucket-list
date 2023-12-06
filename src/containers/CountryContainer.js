@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Countries from '../components/Countries';
 import CountryList from '../components/CountryList';
 import VisitedCountryList from '../components/VisitedCountryList';
 
@@ -27,7 +26,12 @@ const CountryContainer = () => {
         // creates copy of original array & adds visited country to the array when marked as visited
         const updateVisitedCountries = [...visitedCountries]
         updateVisitedCountries.push(countryVisited);
+
+        // Remove the visited country from the not visited list
+        const updatedCountriesList = countries.filter ((country) => country !== countryVisited)
+
         setVisitedCountries(updateVisitedCountries); // updates state of empty visitedCountries array
+        setCountries(updatedCountriesList);
     }
 
     console.log(countries);
@@ -35,7 +39,7 @@ const CountryContainer = () => {
     return(
         // returns list of countries as a list to the user
         <>
-        <CountryList countries={countries}/>
+        <CountryList countries={countries} markCountryAsVisited={markCountryAsVisited}/>
         <VisitedCountryList visitedCountries={visitedCountries}/>
         </>
     );
